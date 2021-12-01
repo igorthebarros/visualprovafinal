@@ -16,5 +16,6 @@ namespace API.Data
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Venda> Vendas { get; set; }
         public DbSet<FormasDePagamento> FormasDePagamento { get; set; }
+        public DbSet<Carrinho> Carrinho { get; set; }
     }
 }

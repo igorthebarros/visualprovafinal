@@ -1,6 +1,7 @@
 using API.Data;
 using API.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace API.Controllers
 {
@@ -23,5 +24,10 @@ namespace API.Controllers
             _context.SaveChanges();
             return Created("", obj);
         }
+
+        [HttpGet]
+        [Route("list")]
+        public IActionResult List() =>
+            Ok(_context.FormasDePagamento.ToList());
     }
 }
